@@ -1,0 +1,47 @@
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a href="javascript:;"
+    [ngClass]="{
+      'active':selectedFramework.toLowerCase().includes('angular')
+    }"
+    (click)="onTabclick('angular')"
+    class="nav-link">Angular</a>
+  </li>
+  <li class="nav-item">
+    <a href="javascript:;"
+    [ngClass]="{
+      'active':selectedFramework.toLowerCase().includes('react')
+    }"
+    (click)="onTabclick('react')"
+    class="nav-link">React</a>
+  </li>
+  <li class="nav-item">
+    <a href="javascript:;"
+    [ngClass]="{
+      'active':selectedFramework.toLowerCase().includes('vue')
+    }"
+    (click)="onTabclick('vue')"
+    class="nav-link">Vue</a>
+  </li>
+</ul>
+
+<div class="tab-content mt-5">
+  <div class="card">
+    <div class="card-body" *ngIf="selectedFramework.toLowerCase().includes('angular')">
+      <strong>Angular</strong> is an open-source JavaScript framework used to
+      create single-page web applications (SPAs)
+    </div>
+    <div class="card-body" *ngIf="selectedFramework.toLowerCase().includes('react')">
+      <strong>React</strong> is designed to create sophisticated user
+      interfaces. It allows using HTML-like syntax within JavaScript code,
+      enabling developers to create reusable components and write less code for
+      UI implementation. React is widely used in web development due to the
+      following features: Code Reusability.
+    </div>
+    <div class="card-body" *ngIf="selectedFramework.toLowerCase().includes('vue')">
+      <strong>Vue</strong> is an open-source model-view-viewmodel front end
+      JavaScript framework for building user interfaces and single-page
+      applications
+    </div>
+  </div>
+</div>
