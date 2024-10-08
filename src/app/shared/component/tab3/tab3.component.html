@@ -1,0 +1,113 @@
+
+<ul class="nav nav-pills mt-2 mb-4">
+  <li class="nav-item"
+  (click) = "selectedFramework = 'angular'">
+    <a
+    [ngClass]="{
+      'active':selectedFramework.toLowerCase().includes('angular')
+    }"
+    href="javascript:;"
+    class="nav-link">Angular
+    </a>
+  </li>
+  <li class="nav-item"
+  (click) = "selectedFramework = 'react'">
+    <a
+    [ngClass]="{
+      'active':selectedFramework.toLowerCase().includes('react')
+    }"
+    href="javascript:;"
+    class="nav-link">React
+    </a>
+  </li>
+  <li class="nav-item"
+  (click) = "selectedFramework = 'vue'">
+    <a
+    [ngClass]="{
+      'active':selectedFramework.toLowerCase().includes('vue')
+    }"
+    href="javascript:;"
+    class="nav-link">vue
+    </a>
+  </li>
+</ul>
+
+<div [ngSwitch]="selectedFramework">
+  <p class="alert alert-info"
+  *ngSwitchCase="'angular'">
+   <strong>Angular</strong>
+   is an open-source JavaScript framework used to
+  create single-page web applications (SPAs)
+  </p>
+  <p class="alert alert-info"
+  *ngSwitchCase="'react'">
+    <strong>React</strong>
+    is designed to create sophisticated user
+      interfaces. It allows using HTML-like syntax within JavaScript code,
+      enabling developers to create reusable components and write less code for
+      UI implementation. React is widely used in web development due to the
+      following features: Code Reusability.
+   </p>
+   <p class="alert alert-info"
+   *ngSwitchCase="'vue'">
+    <strong>Vue</strong>
+    is an open-source model-view-viewmodel front end
+      JavaScript framework for building user interfaces and single-page
+      applications
+   </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div [ngSwitch]="val">
+  <p class="alert alert-info" *ngSwitchCase="5">
+    The value is 5
+  </p>
+  <p class="alert alert-info" *ngSwitchCase="10">
+    The value is 10
+  </p>
+  <p class="alert alert-info" *ngSwitchCase="15">
+    The value is 15
+  </p>
+  <p class="alert alert-info" *ngSwitchDefault>
+    The value is anything
+  </p>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p class="alert alert-info">
+  The value is 5
+</p>
+<p class="alert alert-info">
+  The value is 10
+</p>
+<p class="alert alert-info">
+  The value is 15
+</p>
+<p class="alert alert-info">
+  The value is any thing apart from 5, 10 and 15
+</p> -->

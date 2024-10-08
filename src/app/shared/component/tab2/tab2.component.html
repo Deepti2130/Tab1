@@ -1,0 +1,32 @@
+
+<ul class="nav nav-pills mt-2">
+  <li class="nav-item"
+  (click)="ontabclick(tab.framework)"
+  *ngFor="let tab of tabArr">
+    <a
+
+    [ngClass]="{
+      'active':selectedframework.toLowerCase().includes(tab.framework)
+    }"
+    href="javascript:;"
+    class="nav-link">
+    {{tab.framework}}
+    {{tab.tabtitle}}</a>
+  </li>
+</ul>
+
+
+
+  <div class="card mt-4">
+    <ng-container *ngFor="let tab of tabArr">
+      <div class="card-body"
+      *ngIf="selectedframework.toLowerCase().includes(tab.framework)"
+      [innerHTML] = "tab.tabcontent">
+    </div>
+    </ng-container>
+
+    </div>
+
+
+
+
